@@ -1,0 +1,29 @@
+
+spring:
+
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  cloud:
+    inetutils:
+      use-only-site-local-interfaces: true
+  profiles:
+    active: live
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://192.168.1.138:9090/eureka
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+streamservice:
+   url: http://192.168.1.132:${client.api_port}/api/v1
+
+
+scheduled:
+   register: 0 0/2 * * * ?

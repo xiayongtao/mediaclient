@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: ${spring.cloud.client.ip-address}:${server.port}
+
+server:
+  port: 10000
+
+
+client:
+ root: /usr/local/
+ type: live   #(push,live,transcode,notranscode)
+ api_port: 1985
+ http_port: 80
+ rtmp_port: 1935
+ path: srs_live/srsd
+ appname: srs_live
+ ip: ${spring.cloud.client.ip-address}
+

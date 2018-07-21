@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    name: ${spring.cloud.client.ip-address}:${server.port}
+
+server:
+  port: 10004
+
+
+client:
+ root: /usr/local/
+ type: transcode   #(push,live,transcode,notranscode)
+ api_port: 19853
+ http_port: 19453
+ rtmp_port: 19353
+ path: srs_notranscode/srsd
+ appname: srs_notranscode

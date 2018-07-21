@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: ${spring.cloud.client.ip-address}:${server.port}
+
+server:
+  port: 10005
+
+
+client:
+ root: /usr/local/
+ type: rtsp   #(push,live,transcode,notranscode)
+ api_port: 0
+ http_port: 0
+ rtmp_port: 0
+ rtsp_port:19354
+ path: rtsp_live/rtspd
+ appname: rtsp_live
