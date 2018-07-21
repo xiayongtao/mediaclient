@@ -26,4 +26,4 @@ streamservice:
 
 
 scheduled:
-   register: 0 0/2 * * * ?
+   register: 0 0/1 * * * ?
